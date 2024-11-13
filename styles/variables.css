@@ -2,3 +2,228 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --accent-color: #ff0070;
+
+  --text-accent-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --image-fon: url(/images/cover-image-dark.png);
+  --overlay: rgb(0 0 40 / 0.5);
+  --rec: ;
+  --color-botton: #ff0070;
+}
+
+@media (min-width: 375px) {
+  .page {
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .REC {
+    top: 1px;
+    right: 38.2px;
+  }
+  .header {
+    grid-template-rows: 229px 247px 30px;
+    padding: 10px;
+    gap: 13px;
+    margin-right: 0.5px;
+  }
+
+  .header__theme-menu {
+    justify-content: end;
+    align-self: center;
+  }
+
+  .title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0 #ff0070;
+    line-height: 95.7px;
+    padding: 0px;
+    align-self: center;
+  }
+  .cover-h3 {
+    margin: 0;
+    align-self: center;
+  }
+  main {
+    padding: 10px;
+  }
+
+  .text-shadow:hover {
+    border: 1px solid;
+  }
+
+  h2 {
+    font-size: 18px;
+    padding: 30px 0 10px 0;
+  }
+  p {
+    margin: 10px 0 20px;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .five {
+    margin-bottom: 20px;
+  }
+  .card-images {
+    padding: 20px 0 31px;
+  }
+  .block {
+    width: 100%;
+  }
+  .images {
+    display: grid;
+    justify-items: start;
+    gap: 10px;
+  }
+  footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .title-footer {
+    text-shadow: 2px 2px 0 #ff0070;
+    align-self: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 20px 20px 0;
+    grid-template-rows: 441px 250px;
+    gap: 7px;
+  }
+
+  .title {
+    font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    justify-content: start;
+    align-items: start;
+    padding: 0;
+  }
+  .cover-h3 {
+    justify-self: end;
+    width: 48.7%;
+  }
+  .decorated-zone::after {
+    left: 20px;
+  }
+  .REC {
+    top: 11px;
+    right: 48.1px;
+  }
+  .card {
+    display: grid;
+    padding: 10px;
+    margin: 30px 0;
+  }
+  .card-1-3 {
+    display: grid;
+    grid-template-columns: 30vw 61.3vw;
+    gap: 27px;
+  }
+
+  h2 {
+    width: 30vw;
+    padding: 10px 0 10px 0;
+  }
+
+  .card-2 p {
+    margin: 0 0 10px;
+  }
+
+  .card-3 {
+    margin: 40px 0 0;
+  }
+
+  .card-images {
+    margin: 20px 10px 0;
+  }
+  .block {
+    inline-size: 100%;
+    block-size: 100%;
+    background-size: cover;
+    object-position: center;
+  }
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    list-style-type: none;
+    margin: 20px 0;
+  }
+  .block:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .block:nth-child(2) {
+    grid-row: span 2;
+
+    object-fit: cover;
+  }
+
+  .block:nth-child(3) {
+    object-fit: cover;
+    grid-row: span 2;
+  }
+  .block:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+footer {
+  padding: 20px 20px;
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .header__theme-menu {
+    margin: 0 0 0 22px;
+    align-self: start;
+    justify-self: center;
+  }
+  .header {
+    grid-template-rows: 310px 219px;
+    align-items: start;
+  }
+
+  .title {
+    font-size: clamp(9.8125rem, 6.0365rem + 5.9vw, 13.5rem);
+    align-self: flex-end;
+  }
+  .cover-h3 {
+    width: 48.9%;
+  }
+
+  .card-1-3 {
+    grid-template-columns: 30.1vw 63.4vw;
+  }
+
+  .card-2 {
+    display: grid;
+  }
+}
+
+.card-2 div {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 20px;
+}
+div .text {
+  display: flex;
+  flex-direction: column;
+}
