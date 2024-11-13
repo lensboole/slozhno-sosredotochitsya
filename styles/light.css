@@ -1,40 +1,23 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  --accent-color: #FF8DCB;
-  
+  --accent-color: #ff8dcb;
+  --color-hover: rgba(53, 52, 48, 0.4);
   --text-color: #353430;
-  --title-color: #FFC2E6;
-  --image-fon:url(/images/cover-image-light.png);
-  --overlay:  rgba(0, 0, 40, 0);
-  --rec: none;
+  --title-color: #ffc2e6;
+  --image-fon: url(/images/cover-image-light.png);
+  --decorated: none;
   --color-botton: #353430;
-  --text-accent-color:#353430;
+  --text-accent-color: #353430;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
-        /* Дублируем переменные светлой темы */
-        --text-accent-color:#353430;
-   --accent-color: #FF8DCB;
-  
-  --text-color: #353430;
-  --title-color: #FFC2E6;
-  --image-fon:url(/images/cover-image-light.png);
-  --overlay:  rgba(0, 0, 40, 0);
-  --rec: none;
-  --color-botton: #353430;    
-    }
+    --text-accent-color: #353430;
+    --accent-color: #ff8dcb;
+    --color-hover: rgba(53, 52, 48, 0.4);
+    --text-color: #353430;
+    --title-color: #ffc2e6;
+    --image-fon: url(/images/cover-image-light.png);
+    --decorated: none;
+    --color-botton: #353430;
+  }
 }
-
-
-
