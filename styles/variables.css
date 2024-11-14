@@ -2,9 +2,10 @@
   --accent-color: #ff0070;
   --text-accent-color: #000028;
   --text-color: #f1b2ce;
-  --color-hover:rgba(255, 0, 111, 0.4);
+  --color-hover:rgba(255, 0, 112, 0.4);
   --title-color: #db00ff;
   --image-fon: url(/images/cover-image-dark.png);
+  --fon-color: #000028;
   --decorated: ;
   --color-botton: #ff0070;
 }

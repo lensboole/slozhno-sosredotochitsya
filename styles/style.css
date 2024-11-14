@@ -1,4 +1,5 @@
 .page {
+  background-color: var(--fon-color);
   background-image: var(--image-fon);
   background-attachment: fixed;
   background-size: cover;
@@ -13,9 +14,9 @@
   min-height: 668px;
   height: 100vh;
   display: grid;
-  grid-template-rows: 229px 237px;
+  grid-template-rows: 1fr auto 1fr;
   padding: 10px;
-  margin-right: 0.5px;
+  position: relative;
 }
 
 .decorated {
@@ -23,8 +24,9 @@
   color: var(--accent-color);
   display: var(--decorated);
   text-transform: uppercase;
-  top: 10px;
-  right: 38.2px;
+  top: 11px;
+  right: 38px;
+  justify-self: end;
 }
 
 .decorated::after {
@@ -48,6 +50,8 @@
   block-size: 25px;
   border-bottom: 1px solid var(--color-botton);
   border-left: 1px solid var(--color-botton);
+  margin-block-end: 10px;
+  margin-inline-start: 10px;
 }
 
 .decorated-zone::before {
@@ -59,6 +63,8 @@
   block-size: 25px;
   border-top: 1px solid var(--color-botton);
   border-right: 1px solid var(--color-botton);
+  margin-block-start: 10px;
+  margin-inline-end: 10px;
 }
 
 .header__theme-menu {
@@ -78,14 +84,19 @@
   text-transform: lowercase;
   padding: 0.1px 12px;
   color: var(--color-botton);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--color-hover);
+  border: 1px solid var(--color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color-botton);
   outline: none;
 }
 
@@ -98,29 +109,35 @@
   text-shadow: 4px 4px 0 #ff0070;
   line-height: 95.7px;
   color: var(--title-color);
-  align-self: start;
+  align-self: end;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  padding: 0px;
 }
 
 .cover {
-  margin: 0;
-  align-self: start;
+  align-self: center;
 }
 
 main {
+  margin-top: 30px;
+  display: grid;
   padding: 10px;
   color: var(--text-color);
+  gap: 30px;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .text-shadow:hover {
   border: none;
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.text-shadow:focus {
+  outline: none;
 }
 
 .text-shadow:focus-visible {
@@ -134,7 +151,7 @@ main {
 .content-header {
   color: var(--color-botton);
   font-size: 18px;
-  padding: 30px 0 10px 0;
+  padding: 0px 0 10px 0;
 }
 
 .text {
@@ -149,16 +166,24 @@ main {
   margin: 10px 0;
 }
 
-.five {
+.text-more {
   margin-bottom: 20px;
 }
 
+.card-images .title-decor {
+  margin: 0 0 10px;
+}
+
 .card-images {
-  padding: 20px 0 31px;
+  padding: 0px 0 31px;
 }
 
 .block {
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  background-size: cover;
+  object-position: center;
+  object-fit: cover;
 }
 
 .images {
@@ -168,13 +193,13 @@ main {
 }
 
 footer {
-  background-color: var(--fon-color);
   min-height: 668px;
   height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .title-footer {
@@ -185,12 +210,10 @@ footer {
 @media (min-width: 768px) {
   .header {
     padding: 20px 20px 20px 0;
-    grid-template-rows: 441px 240px;
-    gap: 7px;
   }
 
   .title {
-    font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-content: start;
     align-items: start;
     padding: 0;
@@ -202,7 +225,13 @@ footer {
   }
 
   .decorated-zone::after {
-    left: 20px;
+    margin-block-end: 20px;
+    margin-inline-start: 20px;
+  }
+
+  .decorated-zone::before {
+    margin-block-start: 20px;
+    margin-inline-end: 20px;
   }
 
   .decorated {
@@ -213,12 +242,11 @@ footer {
   .card {
     display: grid;
     padding: 10px;
-    margin: 30px 0;
   }
 
   .content-card {
     display: grid;
-    grid-template-columns: 30vw 61.3vw;
+    grid-template-columns: 30vw 1fr;
     gap: 27px;
   }
 
@@ -231,19 +259,8 @@ footer {
     margin: 0 0 20px;
   }
 
-  .card-section {
-    margin: 30px 0 0;
-  }
-
   .card-images {
     margin: 20px 10px 0;
-  }
-
-  .block {
-    inline-size: 100%;
-    block-size: 100%;
-    background-size: cover;
-    object-position: center;
   }
 
   .images {
@@ -289,21 +306,17 @@ footer {
     justify-self: center;
   }
 
-  .header {
-    grid-template-rows: 310px 210px;
-  }
-
   .title {
     font-size: clamp(9.8125rem, 6.0365rem + 5.9vw, 13.5rem);
   }
 
   .cover {
-    margin: 9px 0 0;
+    margin: 17px 0 0;
     width: 48.9%;
   }
 
   .content-card {
-    grid-template-columns: 30.1vw 63.4vw;
+    grid-template-columns: 30.1vw 1fr;
   }
 
   .dinamic-section {

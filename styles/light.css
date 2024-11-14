@@ -3,6 +3,7 @@
   --color-hover: rgba(53, 52, 48, 0.4);
   --text-color: #353430;
   --title-color: #ffc2e6;
+  --fon-color: #fff1f7;
   --image-fon: url(/images/cover-image-light.png);
   --decorated: none;
   --color-botton: #353430;
@@ -16,6 +17,7 @@
     --color-hover: rgba(53, 52, 48, 0.4);
     --text-color: #353430;
     --title-color: #ffc2e6;
+    --fon-color: #fff1f7;
     --image-fon: url(/images/cover-image-light.png);
     --decorated: none;
     --color-botton: #353430;
