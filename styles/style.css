@@ -52,6 +52,8 @@
   border-left: 1px solid var(--color-botton);
   margin-block-end: 10px;
   margin-inline-start: 10px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .decorated-zone::before {
@@ -65,6 +67,8 @@
   border-right: 1px solid var(--color-botton);
   margin-block-start: 10px;
   margin-inline-end: 10px;
+  right: 0px;
+  top: 0px;
 }
 
 .header__theme-menu {
@@ -113,16 +117,12 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
-.cover {
-  align-self: center;
-}
-
 main {
   margin-top: 30px;
   display: grid;
   padding: 10px;
   color: var(--text-color);
-  gap: 30px;
+  gap: 50px;
 }
 
 .text-shadow {
@@ -151,11 +151,17 @@ main {
 .content-header {
   color: var(--color-botton);
   font-size: 18px;
-  padding: 0px 0 10px 0;
+}
+
+.content-header:not(:first-child):not(:last-child) {
+  padding: 10px 0;
 }
 
 .text {
   color: var(--text-color);
+}
+
+p.text:not(:first-child):not(:last-child) {
   margin: 10px 0 20px;
 }
 
@@ -163,7 +169,18 @@ main {
   color: var(--text-accent-color);
   background-color: var(--accent-color);
   font-size: 18px;
-  margin: 10px 0;
+}
+.dinamic-section .title-decor {
+  margin: 20px 0 10px;
+}
+
+.title-decor {
+  margin: 20px 0 10px;
+}
+
+.cover {
+  align-self: center;
+  margin: 10px 0px;
 }
 
 .text-more {
@@ -219,6 +236,11 @@ footer {
     padding: 0;
   }
 
+  main {
+    margin-top: 40px;
+    gap: 60px;
+  }
+
   .cover {
     justify-self: end;
     width: 48.7%;
@@ -244,6 +266,14 @@ footer {
     padding: 10px;
   }
 
+  .title-decor {
+    margin: 0;
+  }
+
+  .title-decor:not(:first-child):not(:last-child) {
+    margin: 20px 0 10px;
+  }
+  
   .content-card {
     display: grid;
     grid-template-columns: 30vw 1fr;
@@ -252,15 +282,10 @@ footer {
 
   .content-header {
     width: 30vw;
-    padding: 10px 0 10px 0;
-  }
-
-  .dinamic-section .text {
-    margin: 0 0 20px;
   }
 
   .card-images {
-    margin: 20px 10px 0;
+    margin: 10px 10px 20px;
   }
 
   .images {
@@ -268,7 +293,7 @@ footer {
     grid-template-columns: repeat(3, auto);
     gap: 20px;
     list-style-type: none;
-    margin: 20px 0;
+    margin: 20px 0 0;
   }
 
   .block:nth-child(1) {
